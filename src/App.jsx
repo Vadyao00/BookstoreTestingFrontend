@@ -73,7 +73,7 @@ function App() {
         pageSize: pageSize
       });
       
-      const response = await fetch(`https://localhost:7240/api/book?${params}`);
+      const response = await fetch(`https://bookstoretesting.runasp.net/api/book?${params}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -103,7 +103,7 @@ function App() {
 
   const generateRandomSeed = async () => {
     try {
-      const response = await fetch('https://localhost:7240/api/book/random-seed');
+      const response = await fetch('https://bookstoretesting.runasp.net/api/book/random-seed');
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
